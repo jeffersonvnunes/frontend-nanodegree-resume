@@ -63,8 +63,7 @@ var work = {
     "display": function () {
         this.jobs.forEach(function (job) {
             $('#workExperience').append(HTMLworkStart);
-            $(".work-entry:last").append(HTMLworkEmployer.replace('%data%',job.employer))
-            .append(HTMLworkTitle.replace('%data%',job.title))
+            $(".work-entry:last").append(HTMLworkEmployer.replace('%data%',job.employer) + HTMLworkTitle.replace('%data%',job.title))
             .append(HTMLworkDates.replace('%data%',job.dates))
             .append(HTMLworkLocation.replace('%data%',job.location))
             .append(HTMLworkDescription.replace('%data%',job.description));
@@ -93,7 +92,7 @@ var projects = {
             .append(HTMLprojectDates.replace('%data%',project.dates))
             .append(HTMLprojectDescription.replace('%data%',project.description));
 
-            for(i in project.images){
+            for(var i = 0; i < project.images.length; i++){
                 projectDOM.append(HTMLprojectImage.replace('%data%',project.images[i]));
             }
         });
@@ -125,20 +124,18 @@ var education = {
         this.schools.forEach(function (school) {
             $('#education').append(HTMLschoolStart);
             educationDOM = $('.education-entry:last');
-            educationDOM.append(HTMLschoolName.replace('%data%',school.name))
-            .append(HTMLschoolDegree.replace('%data%',school.degree))
+            educationDOM.append(HTMLschoolName.replace('%data%',school.name) + HTMLschoolDegree.replace('%data%',school.degree))
             .append(HTMLschoolDates.replace('%data%',school.dates))
             .append(HTMLschoolLocation.replace('%data%',school.location));
 
-            for(m in school.majors){
+            for(var m = 0; m < school.majors.length; m++){
                 educationDOM.append(HTMLschoolMajor.replace('%data%',school.majors[m]));
             }
         });
 
         this.onlineCourses.forEach(function (online) {
             educationDOM.append(HTMLonlineClasses)
-            .append(HTMLonlineTitle.replace('%data%',online.title))
-            .append(HTMLonlineSchool.replace('%data%',online.school))
+            .append(HTMLonlineTitle.replace('%data%',online.title) + HTMLonlineSchool.replace('%data%',online.school))
             .append(HTMLonlineDates.replace('%data%',online.dates))
             .append(HTMLonlineURL.replace('%data%',online.url));
         });

@@ -26,7 +26,7 @@ h6 {
 
 h1 {
   font-size: 40px;
-  color: #f5a623;
+  color: #000000;
   line-height: 48px;
   display: inline;
 }
@@ -42,7 +42,7 @@ h2 {
 h3 {
   font-style: italic;
   font-size: 20px;
-  color: #000;
+  color: #999;
   line-height: 22px;
 }
 
@@ -95,7 +95,7 @@ a {
 .welcome-message {
   font-style: italic;
   font-size: 18px;
-  color: #f3f3f3;
+  color: #f5ae23;
   line-height: 28px;
 }
 
@@ -108,13 +108,26 @@ a {
   background-color: #f5ae23;
 }
 
+.black {
+  background-color: #000000;
+}
+
 .orange-text {
   color: #f5ae23;
 }
 
 .white-text {
+   font-weight: bold;
+   color: #fff;
+ }
+
+.black-text {
   font-weight: bold;
-  color: #fff;
+  color: #000000;
+}
+
+.green {
+  background-color: #008200;
 }
 
 .gray {
@@ -129,7 +142,7 @@ a {
 
 /* TODO: Replace with image later */
 #header {
-  background-color: #484848;
+  background-color: #008200;
 }
 
 .flex-box {
